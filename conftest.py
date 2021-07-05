@@ -1,3 +1,5 @@
+import time
+
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -18,5 +20,6 @@ def browser(request):
     else:
         print("Browser<browser_name> still is not implemented")
     yield browser
+    time.sleep(6)
     print("\nQuit browser...")
     browser.quit()
