@@ -24,3 +24,14 @@ class ProductPage(BasePage):
         print(message_basket_total.text)
         assert product_price.text == message_basket_total.text, "не равно"
 
+    #def should_be_success_message(self):
+    #    assert self.is_element_present(*ProductPageLocators.ADDED_PRODUCT), "seccess messege is not present, but should be"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(
+            *ProductPageLocators.ADDED_PRODUCT), "seccess messege is present, but should not be"
+
+    def success_message_is_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.ADDED_PRODUCT), \
+            "Success_message is not disappeared"
+
