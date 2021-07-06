@@ -11,4 +11,4 @@ class ProductPageLocators():
     ADDED_PRODUCT = (By.CSS_SELECTOR, "div.alertinner strong")
     PRODUCT_NAME = (By.TAG_NAME, "h1")
     PRODUCT_PRICE = (By.XPATH, "//p[@class='price_color']")
-    CART_PRICE = (By.XPATH, "//div[@class='alertinner ']/p")
+    CART_PRICE = (By.XPATH, "//div[@class='alertinner ']/p/strong")
