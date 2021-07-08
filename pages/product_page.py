@@ -22,7 +22,7 @@ class ProductPage(BasePage):
             *ProductPageLocators.PRODUCT_PRICE)
         print(product_price.text)
         print(message_basket_total.text)
-        assert product_price.text == message_basket_total.text, "не равно"
+        assert product_price.text == message_basket_total.text, "Price is not correct"
 
     def should_be_success_message(self):
         assert self.is_element_present(*ProductPageLocators.ADDED_PRODUCT), "seccess messege is not present, but should be"
